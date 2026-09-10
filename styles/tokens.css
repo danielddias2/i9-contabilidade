@@ -1,0 +1,219 @@
+/**
+ * ============================================================
+ * I9 CONTABILIDADE — DESIGN TOKENS
+ * ============================================================
+ *
+ * FONTE ÚNICA DE VERDADE para todos os valores visuais.
+ *
+ * Para alterar a personalidade visual do site:
+ *  - Cores principais:    altere --color-primary e --color-accent
+ *  - Tipografia:         altere --font-family-base e tamanhos
+ *  - Espaçamentos:       altere a escala de --space-*
+ *  - Arredondamentos:    altere a escala de --radius-*
+ *  - Sombras:            altere --shadow-*
+ *
+ * NUNCA use valores hex diretamente nos outros arquivos CSS.
+ * Sempre referencie um token existente ou crie um novo aqui.
+ * ============================================================
+ */
+
+:root {
+
+  /* ───────────────────────────────────────────
+     CORES — Paleta I9
+  ─────────────────────────────────────────── */
+
+  --color-primary:       #082B63;   /* Azul institucional — autoridade, confiança       */
+  --color-primary-dark:  #061A3A;   /* Azul profundo — fundos escuros, CTA final        */
+  --color-primary-mid:   #0D3D8A;   /* Azul médio — hover, estados ativos               */
+  --color-primary-light: #E8EEF8;   /* Azul muito claro — backgrounds sutis             */
+
+  --color-accent:        #FF6500;   /* Laranja principal — ação, energia, conversão     */
+  --color-accent-light:  #FF8A00;   /* Laranja secundário — hover, gradiente suave      */
+  --color-accent-ultra:  #FFF0E6;   /* Laranja ultraclaro — background de destaque      */
+
+  --color-gold:          #C9A66B;   /* Dourado de apoio — elementos comemorativos       */
+  --color-gold-light:    #F5ECD9;   /* Dourado ultraclaro                               */
+
+  --color-background:    #F5F7FA;   /* Fundo claro — base de todas as seções claras     */
+  --color-surface:       #FFFFFF;   /* Branco — cards, modais, elementos elevados       */
+  --color-surface-alt:   #F0F4F9;   /* Cinza levíssimo — variação de surface             */
+
+  --color-text:          #172033;   /* Texto principal — máximo contraste               */
+  --color-text-secondary:#3D4E6A;   /* Texto secundário — subtítulos, descrições        */
+  --color-muted:         #6B7A99;   /* Texto fraco — metadados, labels, captions        */
+  --color-disabled:      #A8B4C8;   /* Elementos desabilitados                          */
+
+  --color-border:        #DDE3EE;   /* Bordas — dividers, separadores                   */
+  --color-border-light:  #EEF1F7;   /* Bordas ultrasuaves                               */
+
+  --color-success:       #10B981;
+  --color-warning:       #F59E0B;
+  --color-error:         #EF4444;
+  --color-whatsapp:      #25D366;   /* Cor oficial WhatsApp — não alterar */
+
+  /* ───────────────────────────────────────────
+     TIPOGRAFIA — Plus Jakarta Sans
+  ─────────────────────────────────────────── */
+
+  --font-family-base:    'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-family-mono:    'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+
+  /* Tamanhos — escala modular baseada em 1rem = 16px */
+  --font-size-xs:   0.75rem;    /* 12px */
+  --font-size-sm:   0.875rem;   /* 14px */
+  --font-size-base: 1rem;       /* 16px */
+  --font-size-lg:   1.125rem;   /* 18px */
+  --font-size-xl:   1.25rem;    /* 20px */
+  --font-size-2xl:  1.5rem;     /* 24px */
+  --font-size-3xl:  1.875rem;   /* 30px */
+  --font-size-4xl:  2.25rem;    /* 36px */
+  --font-size-5xl:  3rem;       /* 48px */
+  --font-size-6xl:  3.75rem;    /* 60px */
+  --font-size-7xl:  4.5rem;     /* 72px */
+
+  /* Pesos */
+  --font-weight-regular:   400;
+  --font-weight-medium:    500;
+  --font-weight-semibold:  600;
+  --font-weight-bold:      700;
+  --font-weight-extrabold: 800;
+
+  /* Alturas de linha */
+  --line-height-tight:   1.2;
+  --line-height-snug:    1.35;
+  --line-height-normal:  1.5;
+  --line-height-relaxed: 1.7;
+  --line-height-loose:   1.9;
+
+  /* Espaçamento entre letras */
+  --letter-spacing-tight:  -0.03em;
+  --letter-spacing-normal:  0em;
+  --letter-spacing-wide:    0.04em;
+  --letter-spacing-wider:   0.08em;
+  --letter-spacing-widest:  0.15em;
+
+  /* ───────────────────────────────────────────
+     ESPAÇAMENTOS — Escala de 4px
+  ─────────────────────────────────────────── */
+
+  --space-1:   0.25rem;    /* 4px  */
+  --space-2:   0.5rem;     /* 8px  */
+  --space-3:   0.75rem;    /* 12px */
+  --space-4:   1rem;       /* 16px */
+  --space-5:   1.25rem;    /* 20px */
+  --space-6:   1.5rem;     /* 24px */
+  --space-8:   2rem;       /* 32px */
+  --space-10:  2.5rem;     /* 40px */
+  --space-12:  3rem;       /* 48px */
+  --space-16:  4rem;       /* 64px */
+  --space-20:  5rem;       /* 80px */
+  --space-24:  6rem;       /* 96px */
+  --space-32:  8rem;       /* 128px */
+  --space-40:  10rem;      /* 160px */
+
+  /* Aliases semânticos */
+  --space-xs:  var(--space-2);
+  --space-sm:  var(--space-4);
+  --space-md:  var(--space-6);
+  --space-lg:  var(--space-8);
+  --space-xl:  var(--space-12);
+  --space-2xl: var(--space-16);
+  --space-3xl: var(--space-24);
+  --space-4xl: var(--space-32);
+
+  /* Padding de seção */
+  --section-padding-y:    var(--space-24);
+  --section-padding-y-sm: var(--space-16);
+
+  /* ───────────────────────────────────────────
+     LAYOUT — Container e Grid
+  ─────────────────────────────────────────── */
+
+  --container-max-width:  1280px;
+  --container-padding-x:  var(--space-6);
+  --grid-gap:             var(--space-6);
+
+  /* ───────────────────────────────────────────
+     BORDER RADIUS
+  ─────────────────────────────────────────── */
+
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-2xl:  24px;
+  --radius-3xl:  32px;
+  --radius-full: 9999px;
+
+  /* ───────────────────────────────────────────
+     SOMBRAS
+  ─────────────────────────────────────────── */
+
+  --shadow-xs:     0 1px 3px rgba(8, 43, 99, 0.05);
+  --shadow-soft:   0 2px 8px rgba(8, 43, 99, 0.06);
+  --shadow-medium: 0 4px 24px rgba(8, 43, 99, 0.09);
+  --shadow-strong: 0 8px 40px rgba(8, 43, 99, 0.13);
+  --shadow-xl:     0 16px 60px rgba(8, 43, 99, 0.16);
+
+  /* Sombra colorida para elementos accent */
+  --shadow-accent: 0 8px 32px rgba(255, 101, 0, 0.25);
+
+  /* ───────────────────────────────────────────
+     TRANSIÇÕES & ANIMAÇÕES
+  ─────────────────────────────────────────── */
+
+  --transition-fast:   150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow:   400ms ease;
+  --transition-spring: 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Duração de animações de entrada */
+  --anim-duration:  600ms;
+  --anim-ease:      cubic-bezier(0.16, 1, 0.3, 1);
+  --anim-stagger:   80ms;   /* Delay entre itens em sequência */
+
+  /* ───────────────────────────────────────────
+     Z-INDEX — Camadas
+  ─────────────────────────────────────────── */
+
+  --z-below:     -1;
+  --z-base:       0;
+  --z-raised:     10;
+  --z-dropdown:   100;
+  --z-sticky:     200;
+  --z-modal:      300;
+  --z-toast:      400;
+  --z-tooltip:    500;
+
+  /* ───────────────────────────────────────────
+     NAVBAR
+  ─────────────────────────────────────────── */
+
+  --navbar-height:          72px;
+  --navbar-height-scrolled: 60px;
+  --navbar-bg:              rgba(255, 255, 255, 0.95);
+  --navbar-bg-scrolled:     rgba(255, 255, 255, 0.97);
+  --navbar-blur:            12px;
+
+  /* ───────────────────────────────────────────
+     BREAKPOINTS (para referência em JS)
+     Em CSS use @media queries diretamente
+  ─────────────────────────────────────────── */
+  /* xs: 0px | sm: 480px | md: 768px | lg: 1024px | xl: 1280px | 2xl: 1536px */
+
+}
+
+/* ───────────────────────────────────────────
+   MODO ESCURO (futuro — estrutura preparada)
+─────────────────────────────────────────── */
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #0A0F1E;
+    --color-surface: #111827;
+    --color-text: #F1F5F9;
+    // ... outras sobreposições
+  }
+}
+*/
