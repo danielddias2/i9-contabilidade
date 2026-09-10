@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta (preenchido via config-loader.js) -->
+  <title>I9 Contabilidade | Carregando...</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Design System CSS — ordem importa -->
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/sections.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+
+  <!-- Favicon (substitua pelo real) -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg">
+</head>
+
+<body>
+
+  <!-- Skip link para acessibilidade -->
+  <a href="#main-content" class="skip-link">Ir para o conteúdo principal</a>
+
+  <!-- ════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════ -->
+  <header class="navbar" role="banner">
+    <div class="container navbar__inner">
+
+      <!-- Logo -->
+      <a href="#" class="navbar__logo logo-placeholder" aria-label="I9 Contabilidade — Página inicial">
+        <div class="logo-placeholder__mark" aria-hidden="true"></div>
+        <div class="logo-placeholder__text">
+          <span class="logo-placeholder__name">I9</span>
+          <span class="logo-placeholder__subtitle">Contabilidade</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="navbar__nav" aria-label="Navegação principal">
+        <a href="#hero"      class="navbar__link" aria-current="page">Início</a>
+        <a href="#sobre"     class="navbar__link">A Empresa</a>
+        <a href="#servicos"  class="navbar__link">Serviços</a>
+        <a href="#conteudos" class="navbar__link">Conteúdos</a>
+        <a href="#footer"    class="navbar__link">Contato</a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <div class="navbar__cta">
+        <a href="#" class="btn btn--primary btn--sm" data-config="whatsapp-link">
+          Falar com um especialista
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button
+        class="navbar__toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="mobile-panel"
+      >
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="navbar__mobile-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Menu Panel -->
+  <div class="navbar__mobile-panel" id="mobile-panel" role="dialog" aria-label="Menu de navegação" aria-modal="true">
+    <div class="navbar__mobile-header">
+      <a href="#" class="logo-placeholder" aria-label="I9 Contabilidade">
+        <div class="logo-placeholder__mark" aria-hidden="true"></div>
+        <div class="logo-placeholder__text">
+          <span class="logo-placeholder__name">I9</span>
+          <span class="logo-placeholder__subtitle">Contabilidade</span>
+        </div>
+      </a>
+      <button class="navbar__mobile-close" aria-label="Fechar menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <nav class="navbar__mobile-nav" aria-label="Navegação mobile">
+      <a href="#hero"      class="navbar__mobile-link">Início</a>
+      <a href="#sobre"     class="navbar__mobile-link">A Empresa</a>
+      <a href="#servicos"  class="navbar__mobile-link">Serviços</a>
+      <a href="#conteudos" class="navbar__mobile-link">Conteúdos</a>
+      <a href="#footer"    class="navbar__mobile-link">Contato</a>
+    </nav>
+    <div class="navbar__mobile-cta">
+      <a href="#" class="btn btn--primary" data-config="whatsapp-link" style="width:100%;justify-content:center;">
+        Falar com um especialista
+      </a>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ────────────────────────────────────
+         1. HERO
+    ──────────────────────────────────── -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+
+      <!-- Elementos geométricos decorativos -->
+      <div class="hero__geo-1" aria-hidden="true"></div>
+      <div class="hero__geo-2" aria-hidden="true"></div>
+      <div class="hero__geo-3" aria-hidden="true"></div>
+
+      <!-- Conteúdo textual -->
+      <div class="hero__content">
+        <div class="hero__eyebrow" data-animate="fade-up">
+          <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+          <span data-config="hero-eyebrow">I9 CONTABILIDADE</span>
+        </div>
+
+        <h1 class="hero__title" id="hero-title" data-animate="fade-up" data-config="hero-title">
+          Contabilidade que entende o seu negócio.
+        </h1>
+
+        <p class="hero__description" data-animate="fade-up" data-config="hero-description">
+          Mais organização, segurança e clareza para você tomar decisões melhores e fazer sua empresa crescer.
+        </p>
+
+        <div class="hero__ctas" data-animate="fade-up">
+          <a
+            href="#"
+            class="btn btn--primary btn--lg"
+            data-config="whatsapp-link"
+            aria-label="Falar com um especialista da I9 Contabilidade via WhatsApp"
+          >
+            Falar com um especialista
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a
+            href="#servicos"
+            class="btn btn--secondary btn--lg"
+            aria-label="Conhecer os serviços da I9 Contabilidade"
+            data-config="hero-secondary-cta"
+          >
+            Conheça nossos serviços
+          </a>
+        </div>
+      </div>
+
+      <!-- Visual / Imagem -->
+      <div class="hero__visual" data-animate="fade-right">
+        <div class="hero__image-wrapper">
+          <!-- Substitua a div placeholder pela tag img quando tiver a imagem real:
+               <img src="assets/images/hero-team.jpg" alt="Equipe I9 Contabilidade" data-config="hero-image"> -->
+          <div class="hero__image-placeholder" role="img" aria-label="I9 Contabilidade — imagem da equipe (placeholder)">
+            <div class="hero__placeholder-content">
+              <div class="hero__placeholder-logo">
+                I<span>9</span>
+              </div>
+              <div class="hero__placeholder-subtitle">Contabilidade</div>
+            </div>
+          </div>
+
+          <!-- Badge flutuante -->
+          <div class="hero__badge" data-animate="scale-in" aria-hidden="true">
+            <div class="hero__badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <div class="hero__badge-text">
+              <span class="hero__badge-value">00+</span>
+              <span class="hero__badge-label">empresas atendidas</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ────────────────────────────────────
+         2. PROVA SOCIAL — NÚMEROS
+    ──────────────────────────────────── -->
+    <section class="stats-section" aria-label="Números da I9 Contabilidade">
+      <div class="container" data-config="stats-list" data-stagger>
+        <!-- Preenchido pelo config-loader.js -->
+        <div class="stat" data-animate="scale-in">
+          <span class="stat__value" data-target="00+">00+</span>
+          <span class="stat__label">Empresas atendidas</span>
+        </div>
+        <div class="stat" data-animate="scale-in">
+          <span class="stat__value" data-target="00">00</span>
+          <span class="stat__label">Anos de experiência</span>
+        </div>
+        <div class="stat" data-animate="scale-in">
+          <span class="stat__value" data-target="00">00</span>
+          <span class="stat__label">Especialistas</span>
+        </div>
+        <div class="stat" data-animate="scale-in">
+          <span class="stat__value" data-target="00%">00%</span>
+          <span class="stat__label">De satisfação</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────
+         3. SERVIÇOS
+    ──────────────────────────────────── -->
+    <section class="section services-section" id="servicos" aria-labelledby="services-title">
+      <div class="container">
+
+        <div class="section-heading text-center">
+          <span class="eyebrow" data-config="services-eyebrow" data-animate="fade-up">Nossos Serviços</span>
+          <h2 class="section-title" id="services-title" data-animate="fade-up" data-config="services-title">
+            Soluções para cada etapa da sua empresa.
+          </h2>
+          <p class="section-description" data-animate="fade-up" data-config="services-description">
+            Da abertura ao crescimento, cuidamos de toda a sua gestão contábil com precisão e proximidade.
+          </p>
+        </div>
+
+        <div class="services-grid" data-config="services-grid" data-stagger>
+          <!-- Preenchido pelo config-loader.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────
+         4. DIFERENCIAIS
+    ──────────────────────────────────── -->
+    <section class="section section--alt differentials-section" id="diferenciais" aria-labelledby="differentials-title">
+      <div class="container">
+        <div class="differentials-inner">
+
+          <!-- Lado esquerdo — sticky -->
+          <div class="differentials-left">
+            <span class="eyebrow" data-config="differentials-eyebrow" data-animate="fade-up">Por que a I9</span>
+            <h2 class="section-title" id="differentials-title" data-animate="fade-up" data-config="differentials-title">
+              Mais do que números. Uma parceria para o seu negócio.
+            </h2>
+            <p class="section-description" data-animate="fade-up">
+              Entendemos que por trás de cada empresa há pessoas com sonhos, metas e desafios reais.
+            </p>
+          </div>
+
+          <!-- Lado direito — grid de diferenciais -->
+          <div class="differentials-right">
+            <div class="differentials-grid" data-config="differentials-grid" data-stagger>
+              <!-- Preenchido pelo config-loader.js -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────
+         5. COMO FUNCIONA
+    ──────────────────────────────────── -->
+    <section class="section how-it-works-section" id="como-funciona" aria-labelledby="how-title">
+      <div class="container">
+        <div class="how-it-works-inner">
+
+          <!-- Lado esquerdo -->
+          <div class="how-it-works-left">
+            <span class="eyebrow" data-config="how-eyebrow" data-animate="fade-up">Como Funciona</span>
+            <h2 class="section-title" id="how-title" data-animate="fade-up" data-config="how-title">
+              Simples do início ao fim.
+            </h2>
+            <p class="section-description" data-animate="fade-up" data-config="how-description">
+              Cuidamos de toda a complexidade contábil para que você foque no que realmente importa: o seu negócio.
+            </p>
+
+            <!-- Visual decorativo -->
+            <div class="how-it-works-visual" data-animate="scale-in" aria-hidden="true">
+              <div class="how-it-works-visual-text">
+                <strong>100%</strong>
+                <span>Digital e sem complicação</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lado direito — lista de passos -->
+          <div class="steps-list" data-config="steps-list">
+            <!-- Preenchido pelo config-loader.js -->
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────
+         6. SOBRE A I9
+    ──────────────────────────────────── -->
+    <section class="section section--alt about-section" id="sobre" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-inner">
+
+          <!-- Imagem -->
+          <div class="about-image" data-animate="fade-right">
+            <div class="about-image__wrapper">
+              <!-- Substitua pelo img real quando disponível:
+                   <img src="assets/images/about-office.jpg" alt="Escritório I9 Contabilidade" loading="lazy" data-config="about-image"> -->
+              <div class="img-placeholder" style="width:100%;height:100%;" role="img" aria-label="Escritório I9 Contabilidade (placeholder)">
+              </div>
+            </div>
+            <div class="about-image__accent" aria-hidden="true"></div>
+            <div class="about-image__accent-2" aria-hidden="true"></div>
+          </div>
+
+          <!-- Conteúdo -->
+          <div class="about-content" data-animate="fade-left">
+            <span class="eyebrow" data-config="about-eyebrow">Sobre a I9</span>
+            <h2 class="section-title" id="about-title" data-config="about-title">
+              Experiência contábil com uma visão moderna de negócio.
+            </h2>
+            <p class="section-description" data-config="about-description">
+              A I9 Contabilidade nasceu da convicção de que uma boa contabilidade vai muito além de cumprir obrigações legais.
+            </p>
+
+            <!-- Stats menores -->
+            <div class="about-stats" data-config="about-stats">
+              <!-- Preenchido pelo config-loader.js -->
+            </div>
+
+            <!-- CTA -->
+            <div class="about-cta">
+              <a href="#equipe" class="btn btn--secondary" data-config="about-cta">
+                Conheça nossa equipe
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────
+         7. EQUIPE
+    ──────────────────────────────────── -->
+    <section class="section team-section" id="equipe" aria-labelledby="team-title">
+      <div class="container">
+
+        <div class="section-heading text-center">
+          <span class="eyebrow" data-config="team-eyebrow" data-animate="fade-up">Nossa Equipe</span>
+          <h2 class="section-title" id="team-title" data-animate="fade-up" data-config="team-title">
+            Conheça quem está por trás da I9.
+          </h2>
+          <p class="section-description" data-animate="fade-up" data-config="team-description">
+            Profissionais especializados, comprometidos com o sucesso do seu negócio.
+          </p>
+        </div>
+
+        <div class="team-grid" data-config="team-grid" data-stagger>
+          <!-- Preenchido pelo config-loader.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────
+         8. CONTEÚDOS
+    ──────────────────────────────────── -->
+    <section class="section section--alt contents-section" id="conteudos" aria-labelledby="contents-title">
+      <div class="container">
+
+        <div class="contents-header">
+          <div class="section-heading" style="margin-bottom:0;">
+            <span class="eyebrow" data-config="contents-eyebrow" data-animate="fade-up">Conteúdos</span>
+            <h2 class="section-title" id="contents-title" data-animate="fade-up" data-config="contents-title">
+              Informação para ajudar sua empresa a crescer.
+            </h2>
+          </div>
+          <a
+            href="#"
+            class="btn btn--secondary"
+            data-config="contents-cta"
+            data-animate="fade-up"
+            aria-label="Ver todos os conteúdos do blog I9 Contabilidade"
+          >
+            Ver todos os conteúdos
+          </a>
+        </div>
+
+        <div class="contents-grid" data-config="contents-grid" data-stagger>
+          <!-- Preenchido pelo config-loader.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────
+         9. DEPOIMENTOS
+    ──────────────────────────────────── -->
+    <section class="section testimonials-section" id="depoimentos" aria-labelledby="testimonials-title">
+      <div class="container">
+
+        <div class="section-heading text-center">
+          <span class="eyebrow" data-config="testimonials-eyebrow" data-animate="fade-up">Depoimentos</span>
+          <h2 class="section-title" id="testimonials-title" data-animate="fade-up" data-config="testimonials-title">
+            Quem confia na I9, recomenda.
+          </h2>
+        </div>
+
+        <div class="testimonials-grid" data-config="testimonials-grid" data-stagger>
+          <!-- Preenchido pelo config-loader.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────
+         10. FAQ
+    ──────────────────────────────────── -->
+    <section class="section section--alt faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="faq-inner">
+
+          <!-- Lado esquerdo -->
+          <div class="faq-left">
+            <span class="eyebrow" data-config="faq-eyebrow" data-animate="fade-up">Dúvidas Frequentes</span>
+            <h2 class="section-title" id="faq-title" data-animate="fade-up" data-config="faq-title">
+              Respostas para as perguntas mais comuns.
+            </h2>
+            <p class="section-description faq-contact-prompt" data-animate="fade-up">
+              Não encontrou o que procura?
+              <a href="#" data-config="whatsapp-link">Fale diretamente com um especialista.</a>
+            </p>
+          </div>
+
+          <!-- Lado direito — accordion -->
+          <div>
+            <div class="accordion" role="list" data-config="faq-list">
+              <!-- Preenchido pelo config-loader.js -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────
+         11. CTA FINAL
+    ──────────────────────────────────── -->
+    <section class="cta-final-section" id="contato" aria-labelledby="cta-title">
+      <div class="cta-final-geo" aria-hidden="true"></div>
+      <div class="container">
+        <div class="cta-final-inner">
+
+          <span class="eyebrow" data-config="cta-eyebrow" data-animate="fade-up">Vamos começar?</span>
+          <h2 class="section-title" id="cta-title" data-animate="fade-up" data-config="cta-title">
+            Vamos colocar sua contabilidade em ordem?
+          </h2>
+          <p class="section-description" data-animate="fade-up" data-config="cta-description">
+            Fale com um de nossos especialistas e descubra como a I9 pode transformar a gestão contábil da sua empresa.
+          </p>
+
+          <a
+            href="#"
+            class="btn btn--primary btn--lg"
+            data-config="cta-button"
+            data-animate="scale-in"
+            aria-label="Falar com um especialista da I9 Contabilidade"
+          >
+            Falar com um especialista
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer class="footer" id="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer-main">
+
+        <!-- Coluna 1 — Brand -->
+        <div class="footer-brand">
+          <a href="#" class="footer-brand__logo logo-placeholder" aria-label="I9 Contabilidade — Início">
+            <div class="logo-placeholder__mark" aria-hidden="true"></div>
+            <div class="logo-placeholder__text">
+              <span class="logo-placeholder__name">I9</span>
+              <span class="logo-placeholder__subtitle">Contabilidade</span>
+            </div>
+          </a>
+          <p class="footer-brand__description" data-config="footer-description">
+            Contabilidade que entende o seu negócio.
+          </p>
+
+          <!-- Social -->
+          <div class="footer-brand__social" aria-label="Redes sociais">
+            <a
+              href="#"
+              data-config="social-instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram da I9 Contabilidade"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a
+              href="#"
+              data-config="social-linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn da I9 Contabilidade"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a
+              href="#"
+              data-config="social-facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook da I9 Contabilidade"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna 2 — Links -->
+        <div class="footer-col">
+          <h3 class="footer-col__title">Navegação</h3>
+          <nav aria-label="Links de rodapé" class="footer-col__links">
+            <a href="#hero"      class="footer-col__link">Início</a>
+            <a href="#sobre"     class="footer-col__link">A Empresa</a>
+            <a href="#servicos"  class="footer-col__link">Serviços</a>
+            <a href="#equipe"    class="footer-col__link">Equipe</a>
+            <a href="#conteudos" class="footer-col__link">Conteúdos</a>
+            <a href="#faq"       class="footer-col__link">FAQ</a>
+          </nav>
+        </div>
+
+        <!-- Coluna 3 — Serviços -->
+        <div class="footer-col">
+          <h3 class="footer-col__title">Serviços</h3>
+          <div class="footer-col__links">
+            <span class="footer-col__link">Contabilidade</span>
+            <span class="footer-col__link">Fiscal</span>
+            <span class="footer-col__link">Departamento Pessoal</span>
+            <span class="footer-col__link">Abertura de Empresas</span>
+            <span class="footer-col__link">Consultoria Tributária</span>
+            <span class="footer-col__link">BPO Financeiro</span>
+          </div>
+        </div>
+
+        <!-- Coluna 4 — Contato -->
+        <div class="footer-col">
+          <h3 class="footer-col__title">Contato</h3>
+          <div class="footer-col__links">
+
+            <a href="#" class="footer-col__link" data-config="whatsapp-link" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+              </svg>
+              WhatsApp
+            </a>
+
+            <a href="#" class="footer-col__link" data-config="footer-phone" aria-label="Telefone">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.4 11.62a19.79 19.79 0 01-3.07-8.67A2 2 0 013.5 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.9a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+              Telefone
+            </a>
+
+            <a href="#" class="footer-col__link" data-config="footer-email" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              Email
+            </a>
+
+            <span class="footer-col__link" data-config="footer-address">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              Endereço
+            </span>
+
+          </div>
+
+          <div class="footer-hours">
+            <strong>Horário de atendimento</strong>
+            <span data-config="footer-hours">Segunda a Sexta, das 8h às 18h</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="footer-bottom">
+        <p class="footer-bottom__copyright" data-config="footer-copyright">
+          © 2025 I9 Contabilidade. Todos os direitos reservados.
+        </p>
+        <p class="footer-bottom__legal" data-config="footer-legal">
+          I9 Contabilidade — CNPJ: XX.XXX.XXX/XXXX-XX
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════
+       WHATSAPP FLOATING BUTTON
+  ════════════════════════════════════════ -->
+  <div class="whatsapp-float" aria-live="polite">
+    <span class="whatsapp-float__tooltip" aria-hidden="true">Fale conosco</span>
+    <a
+      href="#"
+      class="whatsapp-float__btn"
+      data-config="whatsapp-link"
+      aria-label="Falar com a I9 Contabilidade pelo WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      <span class="whatsapp-float__pulse" aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       SCRIPTS — ordem importa
+  ════════════════════════════════════════ -->
+
+  <!-- 1. Configuração central (deve ser carregada primeiro) -->
+  <script src="config/site.config.js"></script>
+
+  <!-- 2. Módulos -->
+  <script src="scripts/config-loader.js"></script>
+  <script src="scripts/navbar.js"></script>
+  <script src="scripts/animations.js"></script>
+  <script src="scripts/accordion.js"></script>
+  <script src="scripts/whatsapp.js"></script>
+
+  <!-- 3. Main orchestrator (deve ser carregado por último) -->
+  <script src="scripts/main.js"></script>
+
+</body>
+</html>
