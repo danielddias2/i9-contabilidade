@@ -38,6 +38,7 @@
   <link rel="stylesheet" href="styles/sections.css">
   <link rel="stylesheet" href="styles/animations.css">
   <link rel="stylesheet" href="styles/responsive.css">
+  <link rel="stylesheet" href="styles/precadastro.css">
 
   <!-- Favicon (substitua pelo real) -->
   <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg">
@@ -680,6 +681,377 @@
   </div>
 
   <!-- ════════════════════════════════════════
+       BOTÃO FLUTUANTE — PRÉ-CADASTRO
+       Para remover: delete este bloco e o modal abaixo.
+  ════════════════════════════════════════ -->
+  <button
+    class="pc-trigger-float"
+    id="pc-trigger-float"
+    type="button"
+    aria-label="Iniciar atendimento — Pré-cadastro I9 Contabilidade"
+  >
+    <span class="pc-trigger-float__icon" aria-hidden="true">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M22 21v-2a4 4 0 00-3.87-3.99M16 3.13a4 4 0 010 7.75"/>
+      </svg>
+    </span>
+    <span class="pc-trigger-float__label">Iniciar atendimento</span>
+  </button>
+
+  <!-- ════════════════════════════════════════
+       MODAL PRÉ-CADASTRO INTELIGENTE
+       Para remover: delete este bloco inteiro,
+       o botão acima, precadastro.css,
+       precadastro.js e document-lookup.js.
+  ════════════════════════════════════════ -->
+  <div
+    id="precadastro-modal"
+    class="pc-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Pré-cadastro I9 Contabilidade"
+    aria-hidden="true"
+  >
+    <div class="pc-modal">
+
+      <!-- Header -->
+      <div class="pc-header">
+        <div class="pc-header__info">
+          <div class="pc-header__eyebrow">
+            <span class="pc-header__eyebrow-dot" aria-hidden="true"></span>
+            Começar atendimento
+          </div>
+          <h2 class="pc-header__title">Pré-cadastro I9 Contabilidade</h2>
+        </div>
+        <button class="pc-close" aria-label="Fechar pré-cadastro">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="pc-progress" aria-label="Progresso do cadastro">
+        <div class="pc-progress__steps" role="list">
+
+          <div class="pc-progress__step is-active" role="listitem" aria-label="Passo 1: Documento">
+            <div class="pc-progress__step-dot">
+              <span class="pc-progress__step-num">1</span>
+            </div>
+          </div>
+          <div class="pc-progress__step-line"></div>
+
+          <div class="pc-progress__step" role="listitem" aria-label="Passo 2: Empresa">
+            <div class="pc-progress__step-dot">
+              <span class="pc-progress__step-num">2</span>
+            </div>
+          </div>
+          <div class="pc-progress__step-line"></div>
+
+          <div class="pc-progress__step" role="listitem" aria-label="Passo 3: Contato">
+            <div class="pc-progress__step-dot">
+              <span class="pc-progress__step-num">3</span>
+            </div>
+          </div>
+          <div class="pc-progress__step-line"></div>
+
+          <div class="pc-progress__step" role="listitem" aria-label="Passo 4: Interesse">
+            <div class="pc-progress__step-dot">
+              <span class="pc-progress__step-num">4</span>
+            </div>
+          </div>
+          <div class="pc-progress__step-line"></div>
+
+          <div class="pc-progress__step" role="listitem" aria-label="Passo 5: Revisão">
+            <div class="pc-progress__step-dot">
+              <span class="pc-progress__step-num">5</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="pc-progress__label" aria-hidden="true">
+          <span class="pc-progress__label-item is-active">Documento</span>
+          <span class="pc-progress__label-item">Empresa</span>
+          <span class="pc-progress__label-item">Contato</span>
+          <span class="pc-progress__label-item">Interesse</span>
+          <span class="pc-progress__label-item">Revisão</span>
+        </div>
+      </div>
+
+      <!-- Body — Steps -->
+      <div class="pc-body">
+
+        <!-- ── STEP 1 — DOCUMENTO ── -->
+        <div class="pc-step is-active" data-step="1" role="group" aria-labelledby="pc-step1-title">
+          <h3 class="pc-step__title" id="pc-step1-title">Qual o seu CPF ou CNPJ?</h3>
+          <p class="pc-step__desc">Usamos seu documento para identificar e pré-preencher os dados da sua empresa automaticamente.</p>
+
+          <div class="pc-field">
+            <label class="pc-field__label" for="pc-documento">
+              CPF ou CNPJ
+              <span class="pc-field__required" aria-hidden="true">*</span>
+            </label>
+            <div class="pc-doc-wrap">
+              <input
+                type="text"
+                id="pc-documento"
+                class="pc-input"
+                inputmode="numeric"
+                autocomplete="off"
+                placeholder="000.000.000-00 ou 00.000.000/0000-00"
+                aria-required="true"
+                aria-describedby="pc-documento-error"
+                maxlength="18"
+              >
+              <span class="pc-doc-type-badge" aria-live="polite" aria-atomic="true"></span>
+            </div>
+            <span id="pc-documento-error" class="pc-field__error" role="alert"></span>
+          </div>
+
+          <!-- Status da consulta automática -->
+          <div class="pc-lookup-status" role="status" aria-live="polite">
+            <span class="pc-lookup-spinner" aria-hidden="true"></span>
+            <span class="pc-lookup-status-text"></span>
+          </div>
+
+          <p class="pc-field__hint">
+            🔒 Seus dados são tratados com total segurança e privacidade, conforme a LGPD.
+          </p>
+        </div>
+
+        <!-- ── STEP 2 — EMPRESA / PESSOA ── -->
+        <div class="pc-step" data-step="2" role="group" aria-labelledby="pc-step2-title">
+          <h3 class="pc-step__title" id="pc-step2-title">Confirme os dados da empresa</h3>
+          <p class="pc-step__desc">Pré-preenchemos as informações disponíveis publicamente. Corrija se necessário.</p>
+
+          <!-- Card com dados consultados -->
+          <div class="pc-fetched-card" aria-label="Dados consultados automaticamente">
+            <p class="pc-fetched-card__title">Dados consultados automaticamente</p>
+            <div class="pc-fetched-card__row">
+              <span class="pc-fetched-card__key">Situação</span>
+              <span class="pc-fetched-card__value" data-fetched="situacao">—</span>
+            </div>
+            <div class="pc-fetched-card__row">
+              <span class="pc-fetched-card__key">Atividade</span>
+              <span class="pc-fetched-card__value" data-fetched="atividade">—</span>
+            </div>
+            <div class="pc-fetched-card__row">
+              <span class="pc-fetched-card__key">Município</span>
+              <span class="pc-fetched-card__value" data-fetched="municipio">—</span>
+            </div>
+          </div>
+
+          <div class="pc-field">
+            <label class="pc-field__label" for="pc-razao-social">
+              Razão Social / Nome Completo
+              <span class="pc-field__required" aria-hidden="true">*</span>
+            </label>
+            <input
+              type="text"
+              id="pc-razao-social"
+              class="pc-input"
+              placeholder="Nome da empresa ou pessoa física"
+              autocomplete="organization"
+              aria-required="true"
+              aria-describedby="pc-razao-error"
+            >
+            <span id="pc-razao-error" class="pc-field__error" role="alert"></span>
+          </div>
+
+          <div class="pc-field">
+            <label class="pc-field__label" for="pc-nome-fantasia">Nome Fantasia</label>
+            <input
+              type="text"
+              id="pc-nome-fantasia"
+              class="pc-input"
+              placeholder="Nome fantasia (opcional)"
+              autocomplete="off"
+            >
+            <span class="pc-field__hint">Deixe em branco se não houver nome fantasia.</span>
+          </div>
+        </div>
+
+        <!-- ── STEP 3 — CONTATO ── -->
+        <div class="pc-step" data-step="3" role="group" aria-labelledby="pc-step3-title">
+          <h3 class="pc-step__title" id="pc-step3-title">Dados de contato</h3>
+          <p class="pc-step__desc">Por onde nossa equipe poderá entrar em contato com você?</p>
+
+          <div class="pc-field">
+            <label class="pc-field__label" for="pc-responsavel">
+              Nome do responsável
+              <span class="pc-field__required" aria-hidden="true">*</span>
+            </label>
+            <input
+              type="text"
+              id="pc-responsavel"
+              class="pc-input"
+              placeholder="Seu nome completo"
+              autocomplete="name"
+              aria-required="true"
+              aria-describedby="pc-responsavel-error"
+            >
+            <span id="pc-responsavel-error" class="pc-field__error" role="alert"></span>
+          </div>
+
+          <div class="pc-field">
+            <label class="pc-field__label" for="pc-whatsapp">
+              WhatsApp
+              <span class="pc-field__required" aria-hidden="true">*</span>
+            </label>
+            <input
+              type="tel"
+              id="pc-whatsapp"
+              class="pc-input"
+              placeholder="(00) 9 0000-0000"
+              inputmode="numeric"
+              autocomplete="tel"
+              aria-required="true"
+              aria-describedby="pc-whatsapp-error"
+              maxlength="16"
+            >
+            <span id="pc-whatsapp-error" class="pc-field__error" role="alert"></span>
+          </div>
+
+          <div class="pc-field">
+            <label class="pc-field__label" for="pc-email">
+              E-mail
+              <span class="pc-field__required" aria-hidden="true">*</span>
+            </label>
+            <input
+              type="email"
+              id="pc-email"
+              class="pc-input"
+              placeholder="seu@email.com.br"
+              autocomplete="email"
+              inputmode="email"
+              aria-required="true"
+              aria-describedby="pc-email-error"
+            >
+            <span id="pc-email-error" class="pc-field__error" role="alert"></span>
+          </div>
+        </div>
+
+        <!-- ── STEP 4 — INTERESSE ── -->
+        <div class="pc-step" data-step="4" role="group" aria-labelledby="pc-step4-title">
+          <h3 class="pc-step__title" id="pc-step4-title">O que você precisa?</h3>
+          <p class="pc-step__desc">Nos conte um pouco mais para que possamos preparar a melhor proposta para você.</p>
+
+          <div class="pc-field">
+            <label class="pc-field__label" for="pc-servico">
+              Serviço de interesse
+              <span class="pc-field__required" aria-hidden="true">*</span>
+            </label>
+            <div class="pc-select-wrap">
+              <select
+                id="pc-servico"
+                class="pc-select"
+                aria-required="true"
+                aria-describedby="pc-servico-error"
+              >
+                <option value="">Selecione um serviço...</option>
+                <!-- Preenchido pelo precadastro.js via siteConfig.services -->
+              </select>
+            </div>
+            <span id="pc-servico-error" class="pc-field__error" role="alert"></span>
+          </div>
+
+          <div class="pc-field">
+            <label class="pc-field__label" for="pc-faturamento">
+              Faturamento mensal estimado
+              <span class="pc-field__required" aria-hidden="true">*</span>
+            </label>
+            <div class="pc-select-wrap">
+              <select
+                id="pc-faturamento"
+                class="pc-select"
+                aria-required="true"
+                aria-describedby="pc-faturamento-error"
+              >
+                <option value="">Selecione a faixa...</option>
+                <option value="ate-10k">Até R$ 10.000/mês</option>
+                <option value="10k-30k">R$ 10.000 a R$ 30.000/mês</option>
+                <option value="30k-80k">R$ 30.000 a R$ 80.000/mês</option>
+                <option value="80k-200k">R$ 80.000 a R$ 200.000/mês</option>
+                <option value="200k-500k">R$ 200.000 a R$ 500.000/mês</option>
+                <option value="acima-500k">Acima de R$ 500.000/mês</option>
+                <option value="nao-sei">Ainda não sei informar</option>
+              </select>
+            </div>
+            <span id="pc-faturamento-error" class="pc-field__error" role="alert"></span>
+          </div>
+
+          <div class="pc-field">
+            <label class="pc-field__label" for="pc-mensagem">Informações adicionais</label>
+            <textarea
+              id="pc-mensagem"
+              class="pc-textarea"
+              placeholder="Descreva sua situação atual, dúvidas ou necessidades específicas (opcional)..."
+              rows="3"
+              aria-describedby="pc-mensagem-hint"
+            ></textarea>
+            <span id="pc-mensagem-hint" class="pc-field__hint">Campo opcional — use para nos dar mais contexto.</span>
+          </div>
+        </div>
+
+        <!-- ── STEP 5 — RESUMO ── -->
+        <div class="pc-step" data-step="5" role="group" aria-labelledby="pc-step5-title">
+          <h3 class="pc-step__title" id="pc-step5-title">Tudo certo. Revise os dados.</h3>
+          <p class="pc-step__desc">Confira as informações antes de enviar. Você pode editar qualquer campo.</p>
+          <div id="pc-summary-content">
+            <!-- Preenchido dinamicamente pelo precadastro.js -->
+          </div>
+        </div>
+
+        <!-- ── STEP 6 — SUCESSO ── -->
+        <div class="pc-step" data-step="6" role="group" aria-labelledby="pc-step6-title">
+          <div class="pc-success">
+            <div class="pc-success__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <h3 class="pc-success__title" id="pc-step6-title">Pré-cadastro enviado!</h3>
+            <p class="pc-success__desc">
+              Sua solicitação foi recebida. Em instantes, nossa equipe entrará em contato pelo WhatsApp para dar continuidade ao atendimento.
+            </p>
+            <div class="pc-success__actions">
+              <button
+                type="button"
+                class="btn btn--primary"
+                onclick="PreCadastro.close()"
+                aria-label="Fechar janela de pré-cadastro"
+              >
+                Entendido
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /pc-body -->
+
+      <!-- Footer — Navegação -->
+      <div class="pc-footer">
+        <button class="pc-footer__back is-hidden" type="button" aria-label="Voltar para o passo anterior">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M19 12H5M12 5l-7 7 7 7"/>
+          </svg>
+          Voltar
+        </button>
+        <div class="pc-footer__next">
+          <button class="btn btn--primary btn--lg pc-footer__next-btn" type="button">
+            Continuar
+          </button>
+        </div>
+      </div>
+
+    </div><!-- /pc-modal -->
+  </div><!-- /precadastro-modal -->
+
+  <!-- ════════════════════════════════════════
        SCRIPTS — ordem importa
   ════════════════════════════════════════ -->
 
@@ -692,6 +1064,8 @@
   <script src="scripts/animations.js"></script>
   <script src="scripts/accordion.js"></script>
   <script src="scripts/whatsapp.js"></script>
+  <script src="scripts/document-lookup.js"></script>
+  <script src="scripts/precadastro.js"></script>
 
   <!-- 3. Main orchestrator (deve ser carregado por último) -->
   <script src="scripts/main.js"></script>
