@@ -8,6 +8,26 @@
  */
 
 /* ───────────────────────────────────────────
+   SCROLL OFFSET — Navbar sticky compensation
+   Garante que âncoras e smooth scroll sempre
+   parem com a seção abaixo do navbar, nunca
+   atrás dele. Usa a altura máxima do navbar
+   (72px) + gap de respiro (16px) = 88px.
+─────────────────────────────────────────── */
+
+html {
+  scroll-padding-top: calc(var(--navbar-height) + 16px);
+}
+
+/* Fallback por elemento — cobre cenários onde
+   scroll-padding-top não se aplica (ex: links
+   internos sem smooth scroll, Safari antigo). */
+section[id],
+footer[id] {
+  scroll-margin-top: calc(var(--navbar-height) + 16px);
+}
+
+/* ───────────────────────────────────────────
    CONTAINER
 ─────────────────────────────────────────── */
 

@@ -42,8 +42,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ─── SMOOTH SCROLL ────────────────────────────
+//
+// Lê a altura REAL do navbar no momento do clique
+// (não o token CSS), garantindo offset correto tanto
+// no estado normal (72px) quanto no estado .scrolled (60px).
+// O scroll-padding-top no CSS cobre links nativos e fallbacks.
 
 function initSmoothScroll() {
+  const EXTRA_GAP = 16; // px de respiro acima da seção
+
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
@@ -54,15 +61,24 @@ function initSmoothScroll() {
 
       e.preventDefault();
 
-      const navbarHeight = parseInt(
-        getComputedStyle(document.documentElement)
-          .getPropertyValue('--navbar-height') || '72',
-        10
-      );
+      // Fecha menu mobile se estiver aberto
+      if (typeof Navbar !== 'undefined' && Navbar.isOpen) {
+        Navbar.closeMenu();
+      }
 
-      const top = target.getBoundingClientRect().top + window.scrollY - navbarHeight - 16;
+      // Lê a altura real do navbar no momento do clique
+      // (funciona com qualquer estado: normal, scrolled, etc.)
+      const navbar = document.querySelector('.navbar');
+      const navbarHeight = navbar ? navbar.getBoundingClientRect().height : 72;
 
-      window.scrollTo({ top, behavior: 'smooth' });
+      // Calcula posição absoluta da seção na página
+      const sectionTop = target.getBoundingClientRect().top + window.scrollY;
+      const scrollTo = sectionTop - navbarHeight - EXTRA_GAP;
+
+      window.scrollTo({
+        top: Math.max(0, scrollTo),
+        behavior: 'smooth',
+      });
     });
   });
 }
