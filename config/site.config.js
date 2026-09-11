@@ -35,11 +35,11 @@ const siteConfig = {
   // ─────────────────────────────────────────────
 
   phone:     "",                   // ← Ex: "(11) 9 9999-9999"
-  whatsapp:  "5594992502997",      // ← WhatsApp oficial I9 Contabilidade
+  whatsapp:  "559491548246",      // ← WhatsApp oficial I9 Contabilidade
   whatsappMessage: "Olá! Gostaria de falar com um especialista da I9 Contabilidade.",
   email:     "",                   // ← Ex: "contato@i9contabilidade.com.br"
-  address:   "",                   // ← Ex: "Rua das Empresas, 100 — São Paulo, SP"
-  businessHours: "Segunda a Sexta, das 8h às 18h",
+  address:   "Rua: Ildonete Guimarães, Jardim Umuarama, Redenção - PA",                   // ← Ex: "Rua das Empresas, 100 — São Paulo, SP"
+  businessHours: "𝐒𝐞𝐠𝐮𝐧𝐝𝐚 𝐚̀ 𝐐𝐮𝐢𝐧𝐭𝐚-𝐅𝐞𝐢𝐫𝐚 𝟎𝟕:𝟑𝟎 𝐚̀𝐬 𝟏𝟖:𝟎𝟎. 𝐒𝐞𝐱𝐭𝐚-𝐅𝐞𝐢𝐫𝐚 𝟎𝟕:𝟑𝟎 𝐚̀𝐬 𝟏𝟕:𝟎𝟎",
 
   // ─────────────────────────────────────────────
   // REDES SOCIAIS
