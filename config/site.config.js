@@ -34,7 +34,7 @@ const siteConfig = {
   // CONTATO
   // ─────────────────────────────────────────────
 
-  phone:     "",                   // ← Ex: "(11) 9 9999-9999"
+  phone:     "559491548246",                   // ← Ex: "(11) 9 9999-9999"
   whatsapp:  "559491548246",      // ← WhatsApp oficial I9 Contabilidade
   whatsappMessage: "Olá! Gostaria de falar com um especialista da I9 Contabilidade.",
   email:     "",                   // ← Ex: "contato@i9contabilidade.com.br"
