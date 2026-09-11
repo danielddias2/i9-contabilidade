@@ -52,6 +52,15 @@
   --color-error:         #EF4444;
   --color-whatsapp:      #25D366;   /* Cor oficial WhatsApp — não alterar */
 
+  /* Backgrounds semânticos de estado (inputs, alertas) */
+  --color-success-bg:    #F0FDF4;
+  --color-success-dark:  #166534;
+  --color-success-light: #D1FAE5;
+  --color-error-bg:      #FEF2F2;
+  --color-error-dark:    #991B1B;
+  --color-error-light:   #FEE2E2;
+
+
   /* ───────────────────────────────────────────
      TIPOGRAFIA — Plus Jakarta Sans
   ─────────────────────────────────────────── */
