@@ -38,7 +38,7 @@ const siteConfig = {
   whatsapp:  "559491548246",      // ← WhatsApp oficial I9 Contabilidade
   whatsappMessage: "Olá! Gostaria de falar com um especialista da I9 Contabilidade.",
   email:     "",                   // ← Ex: "contato@i9contabilidade.com.br"
-  address:   "Rua: Ildonete Guimarães, Jardim Umuarama, buceta Redenção - PA",                   // ← Ex: "Rua das Empresas, 100 — São Paulo, SP"
+  address:   "Rua: Ildonete Guimarães, Jardim Umuarama, Redenção - PA",                   // ← Ex: "Rua das Empresas, 100 — São Paulo, SP"
   businessHours: "𝐒𝐞𝐠𝐮𝐧𝐝𝐚 𝐚̀ 𝐐𝐮𝐢𝐧𝐭𝐚-𝐅𝐞𝐢𝐫𝐚 𝟎𝟕:𝟑𝟎 𝐚̀𝐬 𝟏𝟖:𝟎𝟎. 𝐒𝐞𝐱𝐭𝐚-𝐅𝐞𝐢𝐫𝐚 𝟎𝟕:𝟑𝟎 𝐚̀𝐬 𝟏𝟕:𝟎𝟎",
 
   // ─────────────────────────────────────────────
