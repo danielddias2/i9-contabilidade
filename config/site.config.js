@@ -35,7 +35,7 @@ const siteConfig = {
   // ─────────────────────────────────────────────
 
   phone:     "",                   // ← Ex: "(11) 9 9999-9999"
-  whatsapp:  "",                   // ← Número com DDI: "5511999999999"
+  whatsapp:  "5594992502997",      // ← WhatsApp oficial I9 Contabilidade
   whatsappMessage: "Olá! Gostaria de falar com um especialista da I9 Contabilidade.",
   email:     "",                   // ← Ex: "contato@i9contabilidade.com.br"
   address:   "",                   // ← Ex: "Rua das Empresas, 100 — São Paulo, SP"
