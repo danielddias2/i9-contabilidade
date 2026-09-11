@@ -138,7 +138,13 @@ const Navbar = {
           }
         });
       },
-      { threshold: 0.3, rootMargin: '-80px 0px -60% 0px' }
+      {
+        // rootMargin top: compensa a navbar sticky (72px) + gap (16px)
+        // rootMargin bottom: -50% garante que a seção precisa ocupar
+        // a metade superior da viewport para ser considerada "ativa"
+        threshold: 0,
+        rootMargin: '-88px 0px -50% 0px',
+      }
     );
 
     sections.forEach(({ el }) => observer.observe(el));
