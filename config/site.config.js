@@ -418,6 +418,32 @@ const siteConfig = {
     copyright:   `© ${new Date().getFullYear()} I9 Contabilidade. Todos os direitos reservados.`,
   },
 
+  // ─────────────────────────────────────────────
+  // PRÉ-CADASTRO INTELIGENTE
+  // Configurações do fluxo de pré-cadastro.
+  // ─────────────────────────────────────────────
+
+  precadastro: {
+
+    // Modo de envio:
+    //   'whatsapp' — compõe mensagem e abre WhatsApp (sem backend)
+    //   'api'      — envia para endpoint via fetch() POST
+    mode: 'whatsapp',
+
+    // URL do endpoint para mode: 'api' (deixe vazio para mode: 'whatsapp')
+    // Ex: "https://api.seudominio.com.br/precadastro"
+    endpoint: '',
+
+    // Textos personalizáveis do modal
+    titulo:     'Pré-cadastro I9 Contabilidade',
+    subtitulo:  'Começar atendimento',
+
+    // Mensagem de sucesso após envio
+    sucessoTitulo: 'Pré-cadastro enviado!',
+    sucessoDesc:   'Em instantes, nossa equipe entrará em contato pelo WhatsApp para dar continuidade ao atendimento.',
+
+  },
+
 };
 
 // ─────────────────────────────────────────────

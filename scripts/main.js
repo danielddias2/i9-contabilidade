@@ -30,7 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. WhatsApp
   WhatsApp.init();
 
-  // 6. Smooth scroll para links internos
+  // 6. Pré-Cadastro Inteligente
+  if (typeof PreCadastro !== 'undefined') PreCadastro.init();
+
+  // 7. Smooth scroll para links internos
   initSmoothScroll();
 
   // 7. Schema markup
