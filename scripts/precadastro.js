@@ -611,17 +611,17 @@ const PreCadastro = {
   // ─── ENVIO ────────────────────────────────────────────────
 
   async submit() {
-    const config = window.siteConfig;
-    const pcConfig = config?.precadastro || {};
     const d = this.data;
+    
+    // Link da ção do fomulário
+    const urlDaPlanilha = 'https://api.sheetmonkey.io/form/da7PMNCVChirECVjeXf3dL';
 
-    // Opção A (padrão): WhatsApp com mensagem pré-formatada
-    if (!pcConfig.endpoint || pcConfig.mode !== 'api') {
+    // Se a URL ainda for o texto padrão, envia para o WhatsApp automaticamente
+    if (!urlDaPlanilha || urlDaPlanilha === 'COLOQUE_A_URL_DA_SUA_API_AQUI') {
       this.submitViaWhatsapp();
       return;
     }
 
-    // Opção B: endpoint de API
     this.nextBtn.textContent = 'Enviando...';
     this.nextBtn.disabled = true;
 
@@ -642,7 +642,7 @@ const PreCadastro = {
         timestamp:     new Date().toISOString(),
       };
 
-      const res = await fetch(pcConfig.endpoint, {
+      const res = await fetch(urlDaPlanilha, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
@@ -654,7 +654,7 @@ const PreCadastro = {
 
     } catch (err) {
       console.error('[PreCadastro] Erro no envio:', err);
-      // Fallback para WhatsApp se API falhar
+      // Fallback para WhatsApp se a API da planilha falhar
       this.submitViaWhatsapp();
     }
   },
