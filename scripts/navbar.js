@@ -143,7 +143,7 @@ const Navbar = {
         // rootMargin bottom: -50% garante que a seção precisa ocupar
         // a metade superior da viewport para ser considerada "ativa"
         threshold: 0,
-        rootMargin: '-88px 0px -50% 0px',
+        rootMargin: '-88px 0px -50% 0px'
       }
     );
 
